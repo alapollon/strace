@@ -84,3 +84,17 @@ MPERS_PRINTER_DECL(bool, fetch_struct_stat,
 	return false;
 #endif
 }
+/*
+
+
+Stat Structure Handling:
+	The script declares a struct_stat type, which may differ depending on the platform
+
+Fetching and Processing:
+	The function fetch_struct_stat
+Platform-Specific Definitions: 
+	The script includes conditional compilation directives to handle platform-specific differences in the stat structure. 
+	That accounts for 32-bit (m32), x32 (mx32), and other architectures. 
+
+ 
+*/
