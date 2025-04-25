@@ -737,3 +737,31 @@ decode_netlink(struct tcb *const tcp,
 		tprint_array_end();
 	}
 }
+/*
+Netlink Protocols and Subsystems:
+	The file includes and uses various Netlink protocols and subsystems, such as:
+	NETLINK_ROUTE, NETLINK_GENERIC, NETLINK_CRYPTO, and more
+ 
+Linux Kernel Netlink Headers:
+	Headers that define structures and constants for netlink communication
+	 like <linux/rtnetlink.h>, <linux/netfilter/nf_tables.h>, <linux/cryptouser.h>
+  
+Netlink Message Decoding:
+	The file defines functions to decode and process Netlink messages, such as decode_nlmsg_type, 
+ 	decode_nlmsghdr, and decode_payload.
+
+Netfilter Integration
+	Interfaces subsystems types like NFT_MSG_NEWRULE, NFT_MSG_GETSET and other firewall ruling 
+ 
+Kernel-Level Entity Decoding: 
+	The file uses utilities like get_fd_nl_family to identify the netlink family associated with 
+ 	a file descriptor
+  
+Custom Extensions: 
+	The script also programs decoding logic for specific Netlink faamilies and atrributes such as:
+ 		decode_mlmsg_flags_netfilter 
+   		decode_nlmsgerr_attr_cookie
+     		NFNL_SUBSYS_ACCT, NFNL_SUBSYS_HOOK 
+ 	
+
+*/ 
